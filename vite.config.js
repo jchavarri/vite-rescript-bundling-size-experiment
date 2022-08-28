@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import analyze from "rollup-plugin-analyzer";
+import rescript from '@jihchi/vite-plugin-rescript';
 
 export default defineConfig({
   resolve: {
@@ -15,5 +15,5 @@ export default defineConfig({
       plugins: [analyze({summaryOnly: true})],
     },
   },
-  plugins: [react()],
+  plugins: [rescript()],
 });

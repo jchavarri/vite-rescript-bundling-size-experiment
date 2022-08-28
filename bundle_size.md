@@ -154,3 +154,35 @@ vite/modulepreload-polyfill
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.68 % (129 Bytes)
 /index.html
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)
+
+4. Use `rescript`
+
+- Using `preact` and `preact-router`
+- Hydrating only interactive parts
+- Replacing jsx and js with Rescript for most components
+
+Rollup File Analysis
+-----------------------------
+bundle size:    21.004 KB
+module count:   10
+
+/node_modules/preact/dist/preact.module.js
+██████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 44.46 % (9.338 KB)
+/node_modules/preact/compat/dist/compat.module.js
+████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 24.66 % (5.18 KB)
+/node_modules/preact/hooks/dist/hooks.module.js
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 10.44 % (2.193 KB)
+/node_modules/rescript/lib/es6/curry.js
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7.69 % (1.615 KB)
+vite/modulepreload-polyfill
+███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 7.44 % (1.562 KB)
+/src/components/Counter.bs.js
+█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 2.88 % (605 Bytes)
+/node_modules/rescript/lib/es6/caml_array.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1.02 % (214 Bytes)
+/src/entry_client.bs.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.93 % (196 Bytes)
+/src/MountPoints.bs.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.48 % (101 Bytes)
+/index.html
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)

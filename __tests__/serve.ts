@@ -28,11 +28,11 @@ export async function serve(): Promise<{ close(): Promise<void> }> {
       logLevel: 'silent',
       build: {
         target: 'esnext',
-        ssr: 'src/entry-server.jsx',
+        ssr: 'src/entry_server.bs.js',
         outDir: 'dist/server',
         rollupOptions: {
           output: {
-            entryFileNames: 'entry-server.js'
+            entryFileNames: 'entry_server.js'
           }
         }
       }
