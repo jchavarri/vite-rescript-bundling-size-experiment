@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     minify: false,
     rollupOptions: {
-      plugins: [analyze()],
+      plugins: [analyze({summaryOnly: true})],
     },
   },
   plugins: [react()],

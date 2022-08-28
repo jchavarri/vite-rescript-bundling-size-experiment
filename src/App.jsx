@@ -8,7 +8,7 @@ const routes = Object.keys(pages).map((path) => {
   const name = path.match(/\.\/pages\/(.*)\.jsx$/)[1]
   return {
     name,
-    path: name === 'Home' ? '/' : `/${name.toLowerCase()}`,
+    path: name === 'Index' ? '/' : `/${name.toLowerCase()}`,
     component: pages[path].default
   }
 })
@@ -21,7 +21,7 @@ export function App() {
           {routes.map(({ name, path }) => {
             return (
               <li key={path}>
-                <Link to={path}>{name}</Link>
+                <Link to={path === '/' ? path : path + ".html"}>{name}</Link>
               </li>
             )
           })}

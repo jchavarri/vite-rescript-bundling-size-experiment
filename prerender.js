@@ -16,7 +16,7 @@ const routesToPrerender = fs
   .readdirSync(toAbsolute('src/pages'))
   .map((file) => {
     const name = file.replace(/\.jsx$/, '').toLowerCase()
-    return name === 'home' ? `/` : `/${name}`
+    return name === 'index' ? `/` : `/${name}`
   })
 
 ;(async () => {

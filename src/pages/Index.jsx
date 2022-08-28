@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <>
       <h1>Home</h1>
-      <Counter />
+      <div id="mount-counter">
+        <Counter />
+      </div>
     </>
   );
 }

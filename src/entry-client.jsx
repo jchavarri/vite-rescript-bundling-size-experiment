@@ -1,10 +1,7 @@
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import { App } from './App'
+import ReactDOM from "react-dom/client";
+import Counter from "./components/Counter";
 
 ReactDOM.hydrateRoot(
-  document.getElementById('app'),
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-)
+  document.getElementById("mount-counter"),
+  <Counter></Counter>
+);
