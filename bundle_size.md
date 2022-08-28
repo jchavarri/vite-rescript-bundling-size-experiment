@@ -74,7 +74,7 @@ react/jsx-runtime
 ## 2. Fine hydration (island)
 
 - Using `react`
-- Hydrating only interactive parts.
+- Hydrating only interactive parts
 
 Rollup File Analysis
 -----------------------------
@@ -125,5 +125,32 @@ react/jsx-runtime
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.02 % (26 Bytes)
 /node_modules/react-dom/client.js?commonjs-exports
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.01 % (16 Bytes)
+/index.html
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)
+
+3. Use `preact`
+
+- Using `preact` and `preact-router`
+- Hydrating only interactive parts.
+
+Rollup File Analysis
+-----------------------------
+bundle size:    19.059 KB
+module count:   8
+
+/node_modules/preact/dist/preact.module.js
+████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░ 49 % (9.338 KB)
+/node_modules/preact/compat/dist/compat.module.js
+█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 27.18 % (5.18 KB)
+/node_modules/preact/hooks/dist/hooks.module.js
+█████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 11.58 % (2.207 KB)
+vite/modulepreload-polyfill
+████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 8.2 % (1.562 KB)
+/node_modules/preact/jsx-runtime/dist/jsxRuntime.module.js
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1.77 % (338 Bytes)
+/src/components/Counter.jsx
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 1.6 % (305 Bytes)
+/src/entry-client.jsx
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0.68 % (129 Bytes)
 /index.html
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)

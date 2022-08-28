@@ -1,19 +1,19 @@
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link, Router } from "preact-router";
 
 // Auto generates routes from files under ./pages
 // https://vitejs.dev/guide/features.html#glob-import
-const pages = import.meta.glob('./pages/*.jsx', { eager: true })
+const pages = import.meta.glob("./pages/*.jsx", { eager: true });
 
 const routes = Object.keys(pages).map((path) => {
-  const name = path.match(/\.\/pages\/(.*)\.jsx$/)[1]
+  const name = path.match(/\.\/pages\/(.*)\.jsx$/)[1];
   return {
     name,
-    path: name === 'Index' ? '/' : `/${name.toLowerCase()}`,
-    component: pages[path].default
-  }
-})
+    path: name === "Index" ? "/" : `/${name.toLowerCase()}`,
+    component: pages[path].default,
+  };
+});
 
-export function App() {
+export function App({ url }) {
   return (
     <>
       <nav>
@@ -21,17 +21,17 @@ export function App() {
           {routes.map(({ name, path }) => {
             return (
               <li key={path}>
-                <Link to={path === '/' ? path : path + ".html"}>{name}</Link>
+                <Link href={path === "/" ? path : path + ".html"}>{name}</Link>
               </li>
-            )
+            );
           })}
         </ul>
       </nav>
-      <Routes>
+      <Router url={url}>
         {routes.map(({ path, component: RouteComp }) => {
-          return <Route key={path} path={path} element={<RouteComp />}></Route>
+          return <RouteComp key={path} path={path}></RouteComp>;
         })}
-      </Routes>
+      </Router>
     </>
-  )
+  );
 }

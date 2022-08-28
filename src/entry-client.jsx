@@ -1,7 +1,7 @@
-import ReactDOM from "react-dom/client";
+import { hydrate } from "preact/compat";
 import Counter from "./components/Counter";
 
-ReactDOM.hydrateRoot(
-  document.getElementById("mount-counter"),
-  <Counter></Counter>
-);
+const mountPoint = document.getElementById("mount-counter");
+if (mountPoint) {
+  hydrate(<Counter></Counter>, mountPoint);
+}
