@@ -128,7 +128,7 @@ react/jsx-runtime
 /index.html
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)
 
-3. Use `preact`
+## 3. Use `preact`
 
 - Using `preact` and `preact-router`
 - Hydrating only interactive parts.
@@ -155,10 +155,8 @@ vite/modulepreload-polyfill
 /index.html
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ 0 % (0 Byte)
 
-4. Use `rescript`
+## 4. Use `rescript`
 
-- Using `preact` and `preact-router`
-- Hydrating only interactive parts
 - Replacing jsx and js with Rescript for most components
 
 Rollup File Analysis
